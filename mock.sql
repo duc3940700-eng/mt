@@ -106,7 +106,7 @@ having sum(e.credits)>120;
 
 select student_id,full_name,gpa 
 from students 
-order by gpa desc
+order by gpa desc;
 p5
 create index idx_enrollments_status_credits
 on enrollments (status, credits);
@@ -116,5 +116,5 @@ from students as s
 join enrollments as e 
 on s.student_id = e.student_id 
 where e.status <>'Dropped' 
-group by s.full_name, s.student_id
+group by s.full_name, s.student_id;
 select*from summarry
